@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+
+
+    <script src="https://kit.fontawesome.com/7ebf938bb6.js" crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>Vinact | Home</title>
+
+    <style>
+        @font-face {
+            font-family: Montserrat1;
+            src: url(fonts/Montserrat-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: Montserrat-bold;
+            src: url(fonts/Montserrat-Bold.ttf);
+        }
+
+        * {
+            font-family: montserrat;
+        }
+
+        .navigat {
+            position: sticky;
+        }
+
+        .hero-section {
+            background-image: url(images/hero-bg.png);
+            background-color: #EBF8FF;
+            background-position: top left;
+            background-size: cover;
+
+            padding-block: 12% 0%;
+        }
+
+        .hero-section h3 {
+            font-family: Montserrat-bold;
+        }
+
+        .hero-section .hero-img img {
+            max-width: 600px;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 15px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            translate: 10px 0px;
+            overflow: hidden;
+        }
+
+        .section2 {
+            background-image: url(images/objects-group-1.png);
+            background-position: top right;
+            background-position-x: 105%;
+            background-position-y: 50px;
+            background-repeat: no-repeat;
+            background-color: #121637;
+        }
+
+
+        .section2 h2 {
+            font-family: Montserrat-bold;
+            color: #fff;
+        }
+
+        span.vinact {
+            font-family: Montserrat-bold;
+            color: #fff;
+        }
+
+        .section2 .img-icon {
+            translate: 0px -50px;
+            margin-bottom: -40px;
+        }
+
+        .section2 .card {
+            border-radius: 15px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Montserrat-bold;
+
+        }
+
+        .section3 .heading {
+            color: #121637;
+        }
+
+        .section4 {
+            background-image: url(images/objects-group-2.png);
+            background-repeat: no-repeat;
+            background-position-x: 105%;
+            background-position-y: 120%;
+
+        }
+
+        .section4 .fa-location-arrow {
+            color: #121637 !important;
+            translate: 20px -15px;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .section4 .side-img img {
+            translate: 0px -60px;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 15px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .section5 .blog-img {
+            max-width: 360px;
+            height: auto;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .section5 .blog-img img {
+            width: 100%;
+            border-radius: 10px;
+            outline: 1px solid rgba(151, 160, 191, .3);
+        }
+
+        .section5 .blog {
+            translate: 0px -20px;
+            border-radius: 20px;
+            border-top-left-radius: 0px;
+            box-shadow: 0 0 25px rgba(151, 160, 191, .3);
+
+
+        }
+
+        .section5 .blog-link {
+            font-family: Montserrat-bold;
+        }
+
+        .section6 ul.social-list {
+            list-style: none;
+        }
+
+        .section6 ul.social-list li {
+            display: inline;
+            margin: 0px 5px;
+            cursor: pointer;
+        }
+
+        .section6 ul.social-list li:hover {
+            color: #21A8F4;
+        }
+
+        .section6 input,
+        .section6 textarea {
+            background-color: rgba(1, 1, 1, 0);
+        }
+
+        .section6 input:focus,
+        .section6 textarea:focus {
+            background-color: rgba(1, 1, 1, 0) !important;
+
+        }
+
+        .accordion {
+            background: transparent;
+        }
+
+        .accordion-item {
+            background: #EBF8FF;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        .accordion-body {
+            background: #EBF8FF;
+            font-size: 0.7rem;
+        }
+
+        .accordion-button {
+            font-size: 0.8rem;
+            background: transparent;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0);
+            font-weight: 500;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border: 1px solid rgba(0, 0, 0, 0);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: rgba(0, 0, 0, 0);
+            color: black;
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            background-image: none;
+            content: "\f0d7";
+            font-family: fontawesome;
+            width: auto;
+            height: auto;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-image: none;
+        }
+
+        .section8 li{
+            list-style: none;
+
+        }
+        .section8 a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .section8 a:hover{
+            color: #21a8f4;
+        }
+
+        .footer-text{
+            border-top: 2px solid #fff;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-section .hero-img img {
+                display: none;
+            }
+
+            .section2 {
+                background-image: none;
+            }
+
+            .section4 .side-img img {
+                translate: 0px 0px;
+                border-radius: 10px;
+            }
+
+            .section4 .fa-location-arrow {
+                translate: 0px 0px;
+            }
+
+            .out-container {
+                margin: 0px !important;
+            }
+           
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid bg-white shadow fixed-top">
+
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <!-- Navbar Brand -->
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo-updated---1-image-.png" alt="Logo" height="45">
+                    </a>
+
+                    <!-- Navbar Toggler -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navbar Links -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-2">
+                                <a class="nav-link text-dark " href="#">Home</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link text-dark " href="#">Our Solution</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link text-dark " href="#">How it Works</a>
+                            </li>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link text-dark " href="#">Our Company</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link btn btn-lg text-white fw-bolder fs-6"
+                                    style="background-color: #21a8f4;" href="#">Get Started</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <section class="hero-section" style="height: 100vh;">
+
+        <div class="container-fluid">
+            <div class="row align-items-center">
+
+                <div class="col-md-1 col-sm-12"></div>
+
+                <div class="col-md-5 col-sm-12" data-aos="fade-right">
+
+                    <h3 class="fs-1" style="color: #121637;">The Point of Sale Solution For</h3>
+                    <h3 class="fs-1" style="color: #21a8f4;">Salon And Restaurant</h3>
+                    <p>Our point of sale system was developed to be easily implemented into your business due to its
+                        intuitive design that makes learning the technology a breeze. The VINACT POS System was created
+                        to be an all-in-one solution for restaurants and eateries so that they could evolve in the
+                        digital age. Meet guest expectations by offering online ordering, offer faster delivery,
+                        contactless pay, and so much more.</p>
+
+                    <a class="btn text-white fw-bolder fs-6" style="background-color: #21a8f4;" href="#">Get Started</a>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12 d-flex justify-content-end p-0 hero-img" data-aos="fade-left"><img
+                        src="images/custom-image-eb995a3381-depositphotos-158349412-stock-photo-hand-working.jpg"
+                        alt=""></div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section2 " >
+        <div class="container py-5 ">
+
+            <h2  data-aos="fade-right">What <span style="font-family: Montserrat-bold; color: #21a8f4;">VINACT </span> Provides</h2>
+            <h2  data-aos="fade-right" >Restaurant Owners:</h2>
+
+            <div class="row mt-5">
+
+                <div class="col-md-6 col-sm-12 mt-5"  data-aos="fade-right" >
+
+                    <div class="card" style="background-color: #171C43;">
+                        <div class="card-body">
+                            <img src="images/simplified-orders-receivinggood.png" width="75" class="img-icon">
+                            <h5 class="card-title text-white">Simplified Orders Receiving Process (Order Receiving App)
+                            </h5>
+                            <p class="card-text text-white">These days, restaurants receive orders through a variety of
+                                sales channels and apps. We offer an intuitive ...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt-5"  data-aos="fade-right" >
+
+                    <div class="card" style="background-color: #171C43;">
+                        <div class="card-body">
+                            <img src="images/straightforward-kitchen-display1.png" width="75" class="img-icon">
+                            <h5 class="card-title text-white">Straightforward Kitchen Display System (K.D.S.)</h5>
+                            <p class="card-text text-white">Digitize your order communication with your kitchen and
+                                staff. Replace handwritten orders with the VINACT d...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt-5"  data-aos="fade-right" >
+
+                    <div class="card" style="background-color: #171C43;">
+                        <div class="card-body">
+                            <img src="images/superior-delivery-delivery-app-1.png" width="75" class="img-icon">
+                            <h5 class="card-title text-white">Superior Delivery (Delivery App)</h5>
+                            <p class="card-text text-white">Through our system, online ordering and delivery have never
+                                been easier. Offer customers contactless order ...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt-5"  data-aos="fade-right" >
+
+                    <div class="card" style="background-color: #171C43;">
+                        <div class="card-body">
+                            <img src="images/customizable-models-for-any-busi.png" width="75" class="img-icon">
+                            <h5 class="card-title text-white">Customizable Models For Any Business</h5>
+                            <p class="card-text text-white">From quick counter service to full-service fine dining
+                                restaurants to food trucks, cafes & bakeries, VI...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 col-sm-12 mt-5"  data-aos="fade-right" >
+
+                    <div class="card" style="background-color: #171C43;">
+                        <div class="card-body">
+                            <img src="images/effective-customer-service-custo.png" width="75" class="img-icon">
+                            <h5 class="card-title text-white">Effective Customer Service (Customer Frontend)</h5>
+                            <p class="card-text text-white">As customers have come to expect shorter wait times and
+                                faster service, restaurants need to evolve to meet ...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section3">
+
+        <div class="container out-container">
+
+
+            <div class="container in-container m-5">
+
+                <h2 class="text-center fs-1">How <span style="font-family: Montserrat-bold; color: #21a8f4;">VINACT
+                    </span> Point of Sales System Stands Apart</h2>
+
+                <div class="row mt-5">
+
+                    <div class="col-md-5" data-aos="fade-right">
+                        <img src="images/woman using pos.png" style="max-width: 360px; height: auto;">
+                    </div>
+
+                    <div class="col-md-7">
+
+                        <div class="row">
+
+                            <div class="col-md-6 pe-5 pb-5" data-aos="fade-left" data-aos-delay="100">
+                                <h5 class="heading">Multicurrency System</h5>
+                                <p class="content">Our versatile system can work with multiple currencies which can
+                                    expand your consumer bases.</p>
+                            </div>
+
+
+                            <div class="col-md-6 pe-5 pb-5" data-aos="fade-left">
+                                <h5 class="heading">Opening and Closing</h5>
+                                <p class="content">Our automated tracking system makes opening and closing a breeze!</p>
+                            </div>
+
+
+                            <div class="col-md-6 pe-5 pb-5" data-aos="fade-left" data-aos-delay="100">
+                                <h5 class="heading">Multilingual System</h5>
+                                <p class="content">The restaurant industry is comprised of a diverse group of people,
+                                    through our multilingual system you can seamlessly communicate regardless of
+                                    language barriers..</p>
+                            </div>
+
+
+                            <div class="col-md-6 pe-5 pb-5" data-aos="fade-left">
+                                <h5 class="heading">Live Chatting System</h5>
+                                <p class="content">We offer 24/7 live support, with reliable professionals to assist
+                                    with any issues that arise. We offer full offline support so that your business
+                                    never has to stop.</p>
+                            </div>
+
+
+                            <div class="col-md-6 pe-5 pb-5" data-aos="fade-left" data-aos-delay="100">
+                                <h5 class="heading">Order Feedback</h5>
+                                <p class="content">Stay connected to your customers and receive feedback through our
+                                    all-in-one system.</p>
+                            </div>
+
+
+                            <div class="col-md-6 pe-5 pb-5" data-aos="fade-left">
+                                <h5 class="heading">Product Management Services</h5>
+                                <p class="content">We offer consistent management of our system so that it can evolve
+                                    along with your business.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section4 mt-5 text-white" style="background-color: #121637;">
+
+        <div class="container">
+
+            <div class="container">
+
+
+                <div class="row">
+
+                    <div class="col-md-7 col-xs-12 col-sm-12 pt-5 pe-5">
+
+                        <h1 class="my-3"  data-aos="fade-right">Demo Links</h1>
+                        <p class="my-4"  data-aos="fade-right">Watch the VINACT system in use, click the links below and see how to boost your
+                            business with our point of sales system.</p>
+
+                        <div class="row">
+
+                            <div class="col-md-6 pe-5 pb-5"  data-aos="fade-right">
+                                <h5 class="heading">User/Admin Website</h5>
+                                <p class="content">Check out our user-friendly website and how admin can create inviting
+                                    designs that increase sales.</p>
+                            </div>
+
+
+                            <div class="col-md-6 pe-5 pb-5"  data-aos="fade-right">
+                                <h5 class="heading">User App</h5>
+                                <p class="content">OWatch as a customer uses the app, and see how simple the process can
+                                    be with VINACT!</p>
+                            </div>
+
+
+                            <div class="col-md-6 pe-5 pb-5"  data-aos="fade-right">
+                                <h5 class="heading">Rider App</h5>
+                                <p class="content">View the rider app and watch as the driver is notified of an order
+                                    based on their proximity and location.</p>
+                            </div>
+
+
+                            <div class="col-md-6 pe-5 pb-5"  data-aos="fade-right">
+                                <h5 class="heading">Admin App</h5>
+                                <p class="content">See how the admin can track sales, and send directives to employees,
+                                    the kitchen, and drivers.</p>
+                            </div>
+
+
+                            <div class="col-md-6 pe-5 pb-5"  data-aos="fade-right">
+                                <h5 class="heading">KDS</h5>
+                                <p class="content">Watch as the kitchen is notified of an order through our
+                                    comprehensive digital screen.</p>
+                            </div>
+
+
+                            <div class="col-md-6 py-5"  data-aos="fade-right">
+                                <a href="#" class="btn btn-primary "> &nbsp; View Demo <i
+                                        class="fa-solid fa-location-arrow"></i></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-5 col-xs-12 col-sm-12">
+                        <div class="side-img"  data-aos="fade-up">
+                            <img src="images/custom-image-2ea4b3029-modern-hi.jpg" style="max-width: 450px;">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section5 py-5">
+
+        <div class="container p-5">
+
+            <div class="heading-text text-center ">
+
+                <h1>Blogs</h1>
+                <p>Get information on best practices of the VINACT POS system, and <br> read success stories from other
+                    restaurant owners.</p>
+
+            </div>
+
+            <div class="row justify-content-center my-5">
+
+                <div class="col-md-4 col-sm-12 col-xs-12" data-aos="fade-right">
+                    <div class="blog-img">
+                        <img src="images/delivery-apps-vs-your-restaurant.jpg">
+
+                    </div>
+                    <div class="blog me-3 p-3 bg-white">
+                        <p class="text-primary">29 September, 2022 <i class="fa-regular fa-clock"></i> 10 Mins</p>
+                        <h5>Delivery Apps vs. Your Restaurant's Webpage:...</h5>
+                        <p>Delivery Apps vs. Your Restaurant's Webpage: What's Better?</p>
+                        <a href="#" class="blog-link">Read Insight</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12" data-aos="fade-up">
+                    <div class="blog-img">
+                        <img src="images/restaurent-automation.jpg">
+
+                    </div>
+                    <div class="blog me-3 p-3 bg-white">
+                        <p class="text-primary">29 September, 2022 <i class="fa-regular fa-clock"></i> 10 Mins</p>
+                        <h5>Restaurant Automation</h5>
+                        <p>DAutomation in restaurants refers to the employment of machines or robots to carry out
+                            various duties.</p>
+                        <a href="#" class="blog-link">Read Insight</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12" data-aos="fade-left">
+                    <div class="blog-img">
+                        <img src="images/What POS Hardware You Need for Your Business.jpg">
+
+                    </div>
+                    <div class="blog me-3 p-3 bg-white">
+                        <p class="text-primary">29 September, 2022 <i class="fa-regular fa-clock"></i> 10 Mins</p>
+                        <h5>What POS Hardware You Need for Your Business....</h5>
+                        <p>What POS Hardware You Need for Your Business?</p>
+                        <a href="#" class="blog-link">Read Insight</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section6 text-white" style="background-color: #121637;">
+
+        <div class="container p-5">
+
+            <div class="row">
+
+                <div class="col-md-5 col-sm-12 col-xs-12"  data-aos="fade-right">
+
+                    <h1>We will love to hear from you,</h1>
+                    <p>Reach out with any and all questions or offer feedback</p>
+
+
+                    <ul class="contact p-0">
+
+                        <p><i class="fa-solid fa-phone"></i> &nbsp; (888)922 6766 </p>
+                        <p><i class="fa-solid fa-envelope"></i> &nbsp; info@reachii.com</p>
+                        <p><i class="fa-solid fa-location-arrow"></i> &nbsp; 2020 Calamos Court, Suite 200 Naperville,
+                            IL 60563</p>
+
+                    </ul>
+                    <ul class="social-list p-0">
+                        <li><i class="fa-brands fa-instagram fa-xl"></i></li>
+                        <li><i class="fa-brands fa-square-facebook fa-xl"></i></li>
+                        <li><i class="fa-brands fa-youtube fa-xl"></i></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-7 col-sm-12 col-xs-1"  data-aos="fade-left">
+
+                    <form action="">
+
+                        <div class="row">
+
+                            <div class="col-md-6 py-3">
+                                <label for="exampleInputText1" class="form-label">First Name</label>
+                                <input type="text" placeholder="First Name" class="form-control"
+                                    id="exampleInputPassword1">
+                            </div>
+
+
+                            <div class="col-md-6 py-3">
+                                <label for="exampleInputText1" class="form-label">Last Name</label>
+                                <input type="text" placeholder="Last Name" class="form-control"
+                                    id="exampleInputPassword1">
+                            </div>
+
+
+                            <div class="col-md-6 py-3">
+                                <label for="exampleInputText1" class="form-label">Email</label>
+                                <input type="email" placeholder="Email" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+
+                            <div class="col-md-6 py-3">
+                                <label for="exampleInputText1" class="form-label">Phone Number</label>
+                                <input type="text" placeholder="Phone Number" class="form-control"
+                                    id="exampleInputPassword1">
+                            </div>
+
+                            <div class="col-md-12">
+
+                                <div class="form-floating py-3">
+                                    <textarea class="form-control" placeholder="Leave a comment here"
+                                        id="floatingTextarea2" style="height: 100px"></textarea>
+                                    <label for="floatingTextarea2" class="text-secondary">Message</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 d-flex justify-content-end">
+                                <a class="btn text-white fw-bolder fs-6" style="background-color: #21a8f4;" href="#">Get
+                                    Started</a>
+                            </div>
+
+
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section7">
+
+        <div class="container p-5">
+
+            <h1 class="text-center mb-4">Frequently Asked Questions</h1>
+
+
+            <div class="accordion" id="accordionExample">
+
+                <div class="accordion-item rounded-4" data-aos="flip-up" data-aos-duration="800">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Why Should I Use A POS System?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse rounded-4" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body rounded-4 fs-6">
+                            To put it simply, using an all-in-one POS system makes organizing and operating your business easier. As the world moves toward total digitalization, restaurants need software that links their consumer to their business and their employees to their individual tasks. Digital POS systems increase speed and effectiveness and give a competitive edge over the competition.
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="accordion-item rounded-4">
+                    <h2 class="accordion-header" id="headingOne" data-aos="flip-up" data-aos-duration="800">
+                        <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsetwo" aria-expanded="false" aria-controls="collapseOne">
+                            Can I Operate the POS Software For A Server/Computer/Ipad That Isn’t In Location of the Business?
+                        </button>
+                    </h2>
+                    <div id="collapsetwo" class="accordion-collapse collapse rounded-4" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body rounded-4 fs-6">
+                            Absolutely! You can manage your business from wherever you have a secure connection.
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="accordion-item rounded-4" data-aos="flip-up" data-aos-duration="800">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsethree" aria-expanded="false" aria-controls="collapseOne">
+                            Will A POS System Help Me Learn About My Customers?
+                        </button>
+                    </h2>
+                    <div id="collapsethree" class="accordion-collapse collapse rounded-4" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body rounded-4 fs-6">
+                            Yes, through customers' previous order history, their delivery location, and the trackable habits of sales, you can learn a lot about your business. As they say, knowledge is power, and the more you know about who you're selling to, where, and when the more you’ll be able to plan your future and grow/optimize your business.
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="accordion-item rounded-4" data-aos="flip-up" data-aos-duration="800">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapseOne">
+                            Is It Hard To Transfer Data To A New Software System?
+                        </button>
+                    </h2>
+                    <div id="collapsefour" class="accordion-collapse collapse rounded-4" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body rounded-4 fs-6">
+                            If you’re worried that your current data will be lost, or difficult to transfer, VINACT can put your mind at ease. With a 24/7 remote support expert to help you through the transition, you can have a new system fully function in no time at all.
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="accordion-item rounded-4" data-aos="flip-up" data-aos-duration="800">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapseOne">
+                            AIs A POS Software System Expensive?
+                        </button>
+                    </h2>
+                    <div id="collapsefive" class="accordion-collapse collapse rounded-4" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body rounded-4 fs-6">
+                            While there is some cost for an advanced streamlined POS system, the time and money it saves a business fare exceeds its price. Any additional fees would be based on the value it brings your company and as it grows into its most successful iteration will certainly compensate for the additional cost.
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="accordion-item rounded-4" data-aos="flip-up" data-aos-duration="800">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapseOne">
+                            Do I Need An Industry-Specific System?
+                        </button>
+                    </h2>
+                    <div id="collapsesix" class="accordion-collapse collapse rounded-4" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body rounded-4 fs-6">
+                            While you technically could use a generic software package, it doesn’t allow you the specifics that can take your restaurant to its optimal effectiveness. Choosing an industry-specific software gives you the specialized features that create long-term customer loyalty and employee satisfaction.
+                        </div>
+                    </div>
+                </div>
+               
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section8 " style="background-color: #121637;">
+        <div class="container text-white pt-5">
+            
+            <div class="row">
+                
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    
+                    <img src="images/custom-image-cb86a30c9-fajira-gr.png" alt="">
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    
+                    <h4>Our Producs</h4>
+                    
+                    <ul class="p-0">
+                        <li class="py-2"><a href="#">Salon POS System</a></li>
+                        <li class="py-2"><a href="#">Restaurant POS System</a></li>
+                        <li class="py-2"><a href="#">How it works</a></li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    
+                    <h4>Company</h4>
+                    
+                    <ul class="p-0">
+                        <li class="py-2"><a href="#">Terms and Conditions</a></li>
+                        <li class="py-2"><a href="#">Privacy Policy</a></li>
+                        <li class="py-2"><a href="#">Our Company</a></li>
+                        <li class="py-2"><a href="#">Blog</a></li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    
+                    <h4>Contact Us</h4>
+                    
+                    <p>2020 Calamos Court, Suite 200, Naperville, IL 60563 <br>
+                        (888)922 6766</p>
+                    
+                </div>
+                
+                <div class="col-xs-12">
+
+                    <p class="footer-text text-center pt-3">&copy; 2023 Vinact All Rights Reserved</p>
+
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(
+        {
+            mirror: false
+        }
+    );
+  </script>
+
+</body>
+
+</html>
